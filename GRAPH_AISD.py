@@ -157,16 +157,3 @@ def Euler(matrix, sv):
         return out
 print ("EULER")
 print(Euler(MATRIX,0))
-
-#xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-result=[]
-def Hamilton(matrix,v,V,result):
-    V.append(v)
-    for i in range(len(matrix)):
-        if i not in V and matrix[v][i]:
-            Hamilton(matrix,i,V,result)
-    if(len(V)==len(matrix)) and (matrix[v][V[0]]):
-        result.append(V+[0])
-    else:
-        V.remove(v)
-#Hamilton(matrix,0,[],result)
